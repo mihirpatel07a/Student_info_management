@@ -69,10 +69,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.Student.datasource">
+    <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.StudentData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.StudentData.datasource">
+    <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\StudentServiceReference\StudentService.disco" />
@@ -98,6 +98,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="pages\Login.aspx" />
     <Content Include="pages\CreateStudent.aspx" />
     <Content Include="pages\Home.aspx" />
     <Content Include="pages\Student.aspx" />
@@ -155,6 +156,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>

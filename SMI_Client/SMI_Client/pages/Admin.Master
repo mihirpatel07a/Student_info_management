@@ -15,7 +15,7 @@
 
     <style>
         #left{
-            background-color : teal;
+            background-color : black;
             height:795px;
             color:white;
         }
@@ -58,14 +58,11 @@
                     <a href ="CreateStudent.aspx" ><label>Create Student</label></a>
                 </div>
 
-               <div class ="mb-3">
-                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
-                   <a href ="updateStudent.aspx" ><label>Update student</label></a>
-                </div>
+             
 
                   <div class ="mb-3">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
-                      <a href ="../Login.aspx" ><label>Logout</label></a>
+                      <a href ="Login.aspx" ><label>Logout</label></a>
                 </div>
 
                  </div>

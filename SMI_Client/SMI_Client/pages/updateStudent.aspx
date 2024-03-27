@@ -56,7 +56,7 @@
               
                
            <div class="col d-flex">
-      <asp:Button ID="SaveBtn" runat="server" Text="Save"  CssClass="btn-success btn-block btn"    />
+      <asp:Button ID="SaveBtn" runat="server" Text="Update"  CssClass="btn-success btn-block btn" OnClick="SaveBtn_Click"    />
                    
 </div>
 
@@ -75,8 +75,9 @@
             
            
             </div>
-          
+              <div class="col p-3">
+        <img class="align-items-center p-4  mx-auto d-block" style="height: 450px" src="https://www.nicepng.com/png/detail/361-3615790_for-students-chittagong-govt-high-school-logo.png" /></div>
         </div>
-    </div>
-</div>
+ </div>
+
 </asp:Content>

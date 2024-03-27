@@ -189,17 +189,23 @@ namespace SMI_Client.StudentServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/Delete", ReplyAction="http://tempuri.org/IStudentService/DeleteResponse")]
         System.Threading.Tasks.Task<bool> DeleteAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudents", ReplyAction="http://tempuri.org/IStudentService/GetStudentsResponse")]
-        SMI_Client.StudentServiceReference.Student[] GetStudents();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudents", ReplyAction="http://tempuri.org/IStudentService/GetStudentsResponse")]
-        System.Threading.Tasks.Task<SMI_Client.StudentServiceReference.Student[]> GetStudentsAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentData", ReplyAction="http://tempuri.org/IStudentService/GetStudentDataResponse")]
         SMI_Client.StudentServiceReference.StudentData GetStudentData();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentData", ReplyAction="http://tempuri.org/IStudentService/GetStudentDataResponse")]
         System.Threading.Tasks.Task<SMI_Client.StudentServiceReference.StudentData> GetStudentDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudent", ReplyAction="http://tempuri.org/IStudentService/GetStudentResponse")]
+        SMI_Client.StudentServiceReference.Student GetStudent(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudent", ReplyAction="http://tempuri.org/IStudentService/GetStudentResponse")]
+        System.Threading.Tasks.Task<SMI_Client.StudentServiceReference.Student> GetStudentAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentCount", ReplyAction="http://tempuri.org/IStudentService/GetStudentCountResponse")]
+        int GetStudentCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStudentService/GetStudentCount", ReplyAction="http://tempuri.org/IStudentService/GetStudentCountResponse")]
+        System.Threading.Tasks.Task<int> GetStudentCountAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -253,20 +259,28 @@ namespace SMI_Client.StudentServiceReference {
             return base.Channel.DeleteAsync(id);
         }
         
-        public SMI_Client.StudentServiceReference.Student[] GetStudents() {
-            return base.Channel.GetStudents();
-        }
-        
-        public System.Threading.Tasks.Task<SMI_Client.StudentServiceReference.Student[]> GetStudentsAsync() {
-            return base.Channel.GetStudentsAsync();
-        }
-        
         public SMI_Client.StudentServiceReference.StudentData GetStudentData() {
             return base.Channel.GetStudentData();
         }
         
         public System.Threading.Tasks.Task<SMI_Client.StudentServiceReference.StudentData> GetStudentDataAsync() {
             return base.Channel.GetStudentDataAsync();
+        }
+        
+        public SMI_Client.StudentServiceReference.Student GetStudent(int id) {
+            return base.Channel.GetStudent(id);
+        }
+        
+        public System.Threading.Tasks.Task<SMI_Client.StudentServiceReference.Student> GetStudentAsync(int id) {
+            return base.Channel.GetStudentAsync(id);
+        }
+        
+        public int GetStudentCount() {
+            return base.Channel.GetStudentCount();
+        }
+        
+        public System.Threading.Tasks.Task<int> GetStudentCountAsync() {
+            return base.Channel.GetStudentCountAsync();
         }
     }
 }

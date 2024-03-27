@@ -5,11 +5,13 @@
 
        <div class="container-fluid">
     <div class="row">
-        <div class="col">
+        
              <h1 class="text-center"> Create Student </h1>
-        </div>
+       
 
     </div>
+
+
     <div class="row">
         <div class="col-md-4">
             <div class =" mb-3">
@@ -25,13 +27,13 @@
           <input type ="email" placeholder="Email" autocomplete="off" class="form-control" runat="server" id="email"/>
 </div>
 
-        <div class =" mb-3
+        <div class =" mb-3">
         <label for=""  class="col-form-label text-success">Student Age</label>
           <input type ="number" placeholder="Age" autocomplete="off" class="form-control" runat="server" id="age"/>
 </div>
               <div class =" mb-3">
                    <label for=""  class="col-form-label text-success">Student Gender </label><br />
-                    <asp:DropDownList  runat="server" Height="35px" Width="384px" id="Gen">
+                    <asp:DropDownList  runat="server" Height="35px" Width="352px" id="Gen">
                         <asp:ListItem>Male</asp:ListItem>
                         <asp:ListItem>Female</asp:ListItem>
                         <asp:ListItem>other</asp:ListItem>
@@ -39,7 +41,7 @@
             </div>
               <div class =" mb-3">
                    <label for=""  class="col-form-label text-success">Branch</label><br />
-                  <asp:DropDownList  runat="server"  Height="35px" Width="384px" id="branch" >
+                  <asp:DropDownList  runat="server"  Height="35px" Width="352px" id="branch" >
                       <asp:ListItem>CE</asp:ListItem>
                       <asp:ListItem>IT</asp:ListItem>
                       <asp:ListItem>CH</asp:ListItem>
@@ -74,8 +76,8 @@
             
            
             </div>
-          
-        </div>
+        <div class="col p-3">
+            <img class="align-items-center p-4  mx-auto d-block" style="height: 450px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDrOx7fR5n2Q8ipH4x_is_4mDDD3zlJCz_1dhPB2xG8tdkBu6lGL-q9bcSu7D31Wqz_l8&usqp=CAU" /></div>
     </div>
-</div>
+
 </asp:Content>

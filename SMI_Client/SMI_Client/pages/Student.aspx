@@ -10,19 +10,21 @@
          <h1 class="text-center">All Students </h1>
     </div>
 
-      <div class="col-md-8" > 
+    </div>
+
+      <div class="col align-items-center p-3" > 
 
       <asp:GridView ID="studentlist" runat="server"  CellPadding="4" ForeColor="#333333" GridLines="None" Width="564px">
           <Columns>
               <asp:TemplateField HeaderText = "Update">
                   <ItemTemplate>
-                      <a href='<%# "updateStudent.aspx?Id=" + Eval("Student_id")  %>' class="btn btn-primary"></a>
+                      <a href='<%# "updateStudent.aspx?Id=" + Eval("Student_id")  %>' class="btn btn-dark">Update</a>
                   </ItemTemplate>
               </asp:TemplateField>
 
                 <asp:TemplateField HeaderText = "Delete">
       <ItemTemplate>
-          <a href='<%# "deleteStudent.aspx?Id=" + Eval("Student_id")  %>' class="btn btn-danger"></a>
+          <a href='<%# "deleteStudent.aspx?Id=" + Eval("Student_id")  %>' class="btn btn-danger">Delete</a>
       </ItemTemplate>
   </asp:TemplateField>
           </Columns>
@@ -39,7 +41,7 @@
           <SortedDescendingHeaderStyle BackColor="#15524A" />
       </asp:GridView>
   </div>
-    </div>
+
            </div>
 
 </asp:Content>

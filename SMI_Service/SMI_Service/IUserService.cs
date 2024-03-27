@@ -20,13 +20,19 @@ namespace SMI_Service
 
         bool Delete(int id);
 
-        [OperationContract]
-        List<Student> GetStudents();
+   
 
         [OperationContract]
 
         StudentData GetStudentData();
 
+        [OperationContract]
+
+        Student GetStudent(int id);
+
+        [OperationContract]
+
+        int GetStudentCount();
 
 
     }
