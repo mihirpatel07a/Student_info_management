@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/pages/Admin.Master.cs" Inherits="SMI_Client.pages.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+
+
+   
+<head runat="server">
+    <title></title>
+   <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        #left{
+            background-color : teal;
+            height:795px;
+            color:white;
+        }
+        label{
+            color: white;
+        }
+      
+    </style>
+
+    
+</head>
+<body>
+   <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-2" id="left">
+                <div style="height:120px">
+
+                </div>
+                 <h4 class="text-center"> Welcome Admin</h4>
+
+
+            <div class="p-3">
+
+               
+           
+                <div class ="mb-3">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+                     <a href ="Home.aspx" ><label>Home</label></a>
+                </div>
+
+                  <div class ="mb-3">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+                      <a href ="Student.aspx" ><label>Student</label></a>
+                </div>
+
+              <div class ="mb-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+                    <a href ="CreateStudent.aspx" ><label>Create Student</label></a>
+                </div>
+
+               <div class ="mb-3">
+                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+                   <a href ="updateStudent.aspx" ><label>Update student</label></a>
+                </div>
+
+                  <div class ="mb-3">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+                      <a href ="../Login.aspx" ><label>Logout</label></a>
+                </div>
+
+                 </div>
+                 
+            </div>
+
+            <div class="col-10">
+               <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="MyContent"  runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+            </div>
+
+            <div class="col-2">
+               
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+
+
+
+  
+
+</html>
