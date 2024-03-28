@@ -41,10 +41,7 @@
               <div class =" mb-3">
                    <label for=""  class="col-form-label text-success">Branch</label><br />
                   <asp:DropDownList  runat="server"  Height="35px" Width="384px" id="branch" >
-                      <asp:ListItem>CE</asp:ListItem>
-                      <asp:ListItem>IT</asp:ListItem>
-                      <asp:ListItem>CH</asp:ListItem>
-                      <asp:ListItem>EC</asp:ListItem>
+                     
                 
 
                   </asp:DropDownList>

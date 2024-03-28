@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SMI_Client.BranchServiceReference;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,6 +20,9 @@ namespace SMI_Client
 
             if (!IsPostBack)
             {
+
+                PopulateBranchDropdown();
+
                 StudentServiceReference.Student student = new StudentServiceReference.Student();
 
 
@@ -26,11 +31,40 @@ namespace SMI_Client
                 name.Value = student.Name;
                 email.Value = student.Email;
                 age.Value = student.Age.ToString();
-                branch.SelectedValue= student.Branch;
-                Gen.SelectedValue = student.Gender;
+                branch.SelectedItem.Value= student.Branch;
+                Gen.SelectedItem.Value = student.Gender;
 
             }
         }
+
+        private void PopulateBranchDropdown()
+        {
+
+            BranchServiceReference.BranchData branchData = new BranchServiceReference.BranchData();
+            BranchServiceReference.BranchClient branchClient = new BranchServiceReference.BranchClient();
+            // Call the GetBranchData method to retrieve branch data
+            branchData = branchClient.GetBranchData();
+
+            // Clear existing items in the dropdown list
+            branch.Items.Clear();
+
+            // Add a default item if needed
+            branch.Items.Add(new ListItem("Default"));
+
+            // Add branches to the dropdown list
+            foreach (DataRow row in branchData.BranchTable.Rows)
+            {
+
+
+                string branchName = row["BranchName"].ToString();
+                branch.Items.Add(new ListItem(branchName));
+            }
+
+
+
+        }
+
+
 
         protected void SaveBtn_Click(object sender, EventArgs e)
         {
