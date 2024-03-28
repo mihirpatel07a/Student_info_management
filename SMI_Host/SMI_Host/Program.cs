@@ -12,13 +12,22 @@ namespace SMI_Host
     {
         static void Main(string[] args)
         {
+
             Type t = typeof(StudentService);
-            Uri http = new Uri("http://localhost:9000/StudentService");
-            ServiceHost host = new ServiceHost(t, http);
+            Type t2 = typeof(BranchService);
+            
+            
+            Uri http = new Uri("http://localhost:9000/SMI/StudentService");
+            Uri http2 = new Uri("http://localhost:9000/SMI/BranchService");
+
+            ServiceHost host = new ServiceHost(t, http );
+            ServiceHost host2 = new ServiceHost(t2, http2);
             host.Open();
+            host2.Open();
             Console.WriteLine("server is running");
             Console.ReadLine();
             host.Close();
+            host2.Close();
         }
     }
 }

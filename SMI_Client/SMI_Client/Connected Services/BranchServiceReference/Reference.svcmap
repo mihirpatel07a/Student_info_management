@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="02902a2b-130b-4c11-b3a2-e1956a6cb0d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9000/SMI/BranchService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BranchService.xsd" MetadataType="Schema" ID="64dc3739-e327-43a5-a575-1d44512aa86c" SourceId="1" SourceUrl="http://localhost:9000/SMI/BranchService?xsd=xsd0" />
+    <MetadataFile FileName="BranchService1.xsd" MetadataType="Schema" ID="b72142cc-937c-4eb5-a3fd-4f4585443aa7" SourceId="1" SourceUrl="http://localhost:9000/SMI/BranchService?xsd=xsd1" />
+    <MetadataFile FileName="BranchService2.xsd" MetadataType="Schema" ID="7c1859d3-8624-49d7-b144-543fd82745ec" SourceId="1" SourceUrl="http://localhost:9000/SMI/BranchService?xsd=xsd2" />
+    <MetadataFile FileName="BranchService3.xsd" MetadataType="Schema" ID="839d62a6-88b0-44e1-8e63-44e046a9930b" SourceId="1" SourceUrl="http://localhost:9000/SMI/BranchService?xsd=xsd3" />
+    <MetadataFile FileName="BranchService.wsdl" MetadataType="Wsdl" ID="0da641a3-5200-4b12-a544-96cd0820ab2e" SourceId="1" SourceUrl="http://localhost:9000/SMI/BranchService?wsdl" />
+    <MetadataFile FileName="BranchService.disco" MetadataType="Disco" ID="2b147931-c1bf-46a9-944c-58373cb81fe9" SourceId="1" SourceUrl="http://localhost:9000/SMI/BranchService?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

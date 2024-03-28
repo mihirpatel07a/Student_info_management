@@ -69,10 +69,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.StudentData.datasource">
+    <None Include="Connected Services\BranchServiceReference\BranchService.disco" />
+    <None Include="Connected Services\BranchServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\BranchServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\BranchServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\BranchServiceReference\BranchService.wsdl" />
+    <None Include="Connected Services\BranchServiceReference\BranchService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BranchServiceReference\BranchService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BranchServiceReference\BranchService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BranchServiceReference\BranchService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\BranchServiceReference\SMI_Client.BranchServiceReference.Branch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\BranchServiceReference\SMI_Client.BranchServiceReference.BranchData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.Student.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StudentServiceReference\SMI_Client.StudentServiceReference.StudentData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\StudentServiceReference\StudentService.disco" />
@@ -98,17 +124,31 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="pages\Branch.aspx" />
+    <Content Include="pages\CreateBranch.aspx" />
+    <Content Include="pages\DeleteBranch.aspx" />
     <Content Include="pages\Login.aspx" />
     <Content Include="pages\CreateStudent.aspx" />
     <Content Include="pages\Home.aspx" />
     <Content Include="pages\Student.aspx" />
     <Content Include="pages\deleteStudent.aspx" />
+    <Content Include="pages\UpdateBranch.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Connected Services\StudentServiceReference\StudentService.wsdl" />
+    <None Include="Connected Services\StudentServiceReference\StudentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StudentServiceReference\StudentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StudentServiceReference\StudentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\StudentServiceReference\StudentService3.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -119,12 +159,6 @@
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
     <Content Include="pages\updateStudent.aspx" />
     <Content Include="Web.config" />
-    <None Include="Connected Services\StudentServiceReference\StudentService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\StudentServiceReference\StudentService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="pages\Admin.Master" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -152,10 +186,36 @@
     <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\BranchServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\StudentServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Branch.aspx.cs">
+      <DependentUpon>Branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Branch.aspx.designer.cs">
+      <DependentUpon>Branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\CreateBranch.aspx.cs">
+      <DependentUpon>CreateBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\CreateBranch.aspx.designer.cs">
+      <DependentUpon>CreateBranch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DeleteBranch.aspx.cs">
+      <DependentUpon>DeleteBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\DeleteBranch.aspx.designer.cs">
+      <DependentUpon>DeleteBranch.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -199,6 +259,13 @@
     <Compile Include="pages\deleteStudent.aspx.designer.cs">
       <DependentUpon>deleteStudent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\UpdateBranch.aspx.cs">
+      <DependentUpon>UpdateBranch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\UpdateBranch.aspx.designer.cs">
+      <DependentUpon>UpdateBranch.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="pages\updateStudent.aspx.cs">
       <DependentUpon>updateStudent.aspx</DependentUpon>
@@ -209,10 +276,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\StudentServiceReference\StudentService.wsdl" />
-    <None Include="Connected Services\StudentServiceReference\StudentService.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -225,6 +288,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BranchServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\StudentServiceReference\" />
   </ItemGroup>
   <PropertyGroup>

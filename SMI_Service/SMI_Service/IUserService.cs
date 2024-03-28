@@ -36,4 +36,36 @@ namespace SMI_Service
 
 
     }
+
+    [ServiceContract]
+    public interface IBranch
+    {
+        [OperationContract]
+        bool InsertBranch(Branch branch);
+
+        [OperationContract]
+
+        bool DeleteBranch(int id);
+
+        [OperationContract]
+        bool UpdateBranch(int id, Branch branch);
+
+
+        [OperationContract]
+
+        int GetBranchCount();
+
+        [OperationContract]
+
+        Branch GetBranch(int id);
+
+        [OperationContract]
+
+        BranchData GetBranchData();
+
+
+    }
+
+
+
 }

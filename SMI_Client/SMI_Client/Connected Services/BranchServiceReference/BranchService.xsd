@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:9000/SMI/StudentService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SMI_Service" />
-  <xs:element name="Insert">
+  <xs:import schemaLocation="http://localhost:9000/SMI/BranchService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SMI_Service" />
+  <xs:element name="InsertBranch">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="student" nillable="true" type="q1:Student" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="branch" nillable="true" type="q1:Branch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertResponse">
+  <xs:element name="InsertBranchResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="InsertBranchResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="student" nillable="true" type="q2:Student" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Delete">
+  <xs:element name="DeleteBranch">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="DeleteResponse">
+  <xs:element name="DeleteBranchResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="DeleteResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="DeleteBranchResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetStudentData">
+  <xs:element name="UpdateBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="branch" nillable="true" type="q2:Branch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateBranchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranchCount">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetStudentDataResponse">
+  <xs:element name="GetBranchCountResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="GetStudentDataResult" nillable="true" type="q3:StudentData" />
+        <xs:element minOccurs="0" name="GetBranchCountResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetStudent">
+  <xs:element name="GetBranch">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetStudentResponse">
+  <xs:element name="GetBranchResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="GetStudentResult" nillable="true" type="q4:Student" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="GetBranchResult" nillable="true" type="q3:Branch" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetStudentCount">
+  <xs:element name="GetBranchData">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetStudentCountResponse">
+  <xs:element name="GetBranchDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="GetStudentCountResult" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SMI_Service" minOccurs="0" name="GetBranchDataResult" nillable="true" type="q4:BranchData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -30,7 +30,25 @@
                         <a href="Student.aspx" class="btn btn-dark">View Details</a>
                     </div>
                 </div>
-            </div>
+                 </div>
+             <div class="col-md-4">
+
+                   <div class="card">
+       <div class="card-header">
+           Branch Info
+       </div>
+       <div class="card-body">
+           <h5 class="card-title">Total Branches</h5>
+           <p class="card-title">
+               <asp:Label ID="Label4" runat="server"></asp:Label>
+           </p>
+           
+           
+           <!-- Add more student information fields as needed -->
+           <a href="Branch.aspx" class="btn btn-dark">View Details</a>
+       </div>
+   </div>
+           </div>
             <!-- Add more card columns for displaying additional students -->
         </div>
     </div>

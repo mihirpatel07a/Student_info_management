@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="http://localhost:9000/SMI/StudentService?wsdl" docRef="http://localhost:9000/SMI/StudentService" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:9000/SMI/BranchService?wsdl" docRef="http://localhost:9000/SMI/BranchService" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
 </discovery>

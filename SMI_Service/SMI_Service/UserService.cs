@@ -171,4 +171,160 @@ namespace SMI_Service
             
 
     }
+
+    [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
+    public class BranchService : IBranch
+    {
+        public bool InsertBranch(Branch branch)
+        {
+            bool isinsertd = false;
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UQN8U3D\\SQLEXPRESS01;Initial Catalog=SMI_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO SMI_DB.dbo.Branch_DB (BranchName, Location, Hod , Nfaculty) values (@Name, @location ,@Hod, @faculty)", con);
+            cmd.Parameters.AddWithValue("@Name", branch.BranchName);
+            cmd.Parameters.AddWithValue("@location", branch.Location);
+            cmd.Parameters.AddWithValue("@Hod", branch.HOD);
+            cmd.Parameters.AddWithValue("@faculty", branch.NumberOfFaculty);
+
+            int g = cmd.ExecuteNonQuery();
+            if (g == 1)
+            {
+                isinsertd = true;
+            }
+            con.Close();
+
+            return isinsertd;
+        }
+
+
+        public bool DeleteBranch(int id)
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UQN8U3D\\SQLEXPRESS01;Initial Catalog=SMI_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("DELETE FROM SMI_DB.dbo.Branch_DB WHERE Branch_id = @id", con);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+
+            int rowsAffected = cmd.ExecuteNonQuery();
+
+            return rowsAffected > 0;
+
+
+        }
+
+        public bool UpdateBranch(int id, Branch branch)
+        {
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UQN8U3D\\SQLEXPRESS01;Initial Catalog=SMI_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("UPDATE SMI_DB.dbo.Branch_DB " +
+                                          "SET BranchName = @Name, " +
+                                          "    Location = @Location, " +
+                                          "    Hod = @Hod, " +
+                                          "    Nfaculty = @faculty " +
+                                          "WHERE Branch_id = @id", con);
+
+
+            cmd.Parameters.AddWithValue("@Name", branch.BranchName);
+            cmd.Parameters.AddWithValue("@location", branch.Location);
+            cmd.Parameters.AddWithValue("@Hod", branch.HOD);
+            cmd.Parameters.AddWithValue("@faculty", branch.NumberOfFaculty);
+            cmd.Parameters.AddWithValue("@id", id);
+
+
+
+            int rowsAffected = cmd.ExecuteNonQuery();
+
+            return rowsAffected > 0;
+
+
+
+        }
+
+        public int GetBranchCount()
+        {
+            int count = 0;
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UQN8U3D\\SQLEXPRESS01;Initial Catalog=SMI_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM SMI_DB.dbo.Branch_DB", con);
+
+            // Execute the command and retrieve the count
+            count = (int)cmd.ExecuteScalar();
+
+            return count;
+
+
+        }
+
+
+        public Branch GetBranch(int id)
+        {
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UQN8U3D\\SQLEXPRESS01;Initial Catalog=SMI_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            con.Open();
+
+            Branch branch = new Branch();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM SMI_DB.dbo.Branch_DB WHERE Branch_id = @id ", con);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            // Check if there are rows returned
+            if (reader.Read())
+            {
+                // Populate the student object with data from the database
+
+                branch.BranchName = reader.GetString(reader.GetOrdinal("BranchName"));
+                branch.Location = reader.GetString(reader.GetOrdinal("Location"));
+                branch.NumberOfFaculty = reader.GetInt32(reader.GetOrdinal("Nfaculty"));
+                branch.HOD = reader.GetString(reader.GetOrdinal("Hod"));
+
+
+            }
+            else
+            {
+
+                return null;
+            }
+
+
+
+            return branch;
+        }
+
+
+        public BranchData GetBranchData()
+        {
+            BranchData branchData = new BranchData();
+
+
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-UQN8U3D\\SQLEXPRESS01;Initial Catalog=SMI_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM SMI_DB.dbo.Branch_DB", con);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable branchTable = new DataTable("BranchTable");
+
+            adapter.Fill(branchTable);
+
+            branchData.BranchTable = branchTable;
+
+            con.Close();
+
+            return branchData;
+
+        }
+
+
+    }
 }

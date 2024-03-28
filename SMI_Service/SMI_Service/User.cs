@@ -39,5 +39,41 @@ namespace SMI_Service
 
     }
 
-   
+
+    [DataContract]
+    public class Branch
+    {
+        [DataMember]
+
+        public string BranchName { get; set; }
+
+        [DataMember]
+
+        public string Location { get; set; }
+
+        [DataMember]
+
+        public string HOD { get; set; } // Head of Department
+
+        [DataMember]
+        public int NumberOfFaculty { get; set; }
+
+
+
+
+
+    }
+
+    [DataContract]
+
+    public class BranchData
+    {
+        [DataMember]
+
+        public DataTable BranchTable { get; set; }
+
+    }
+
+
+
 }

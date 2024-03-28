@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="BranchService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9000/SMI/BranchService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9000/SMI/BranchService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9000/SMI/BranchService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SMI_Service" />
+      <xsd:import schemaLocation="http://localhost:9000/SMI/BranchService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBranch_InsertBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBranch" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_InsertBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_DeleteBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBranch" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_DeleteBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_UpdateBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranch" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_UpdateBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_GetBranchCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchCount" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_GetBranchCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_GetBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranch" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_GetBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_GetBranchData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchData" />
+  </wsdl:message>
+  <wsdl:message name="IBranch_GetBranchData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBranch">
+    <wsdl:operation name="InsertBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranch/InsertBranch" message="tns:IBranch_InsertBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranch/InsertBranchResponse" message="tns:IBranch_InsertBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranch/DeleteBranch" message="tns:IBranch_DeleteBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranch/DeleteBranchResponse" message="tns:IBranch_DeleteBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranch/UpdateBranch" message="tns:IBranch_UpdateBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranch/UpdateBranchResponse" message="tns:IBranch_UpdateBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranch/GetBranchCount" message="tns:IBranch_GetBranchCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranch/GetBranchCountResponse" message="tns:IBranch_GetBranchCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranch/GetBranch" message="tns:IBranch_GetBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranch/GetBranchResponse" message="tns:IBranch_GetBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBranch/GetBranchData" message="tns:IBranch_GetBranchData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBranch/GetBranchDataResponse" message="tns:IBranch_GetBranchData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBranch" type="tns:IBranch">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertBranch">
+      <soap:operation soapAction="http://tempuri.org/IBranch/InsertBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBranch">
+      <soap:operation soapAction="http://tempuri.org/IBranch/DeleteBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <soap:operation soapAction="http://tempuri.org/IBranch/UpdateBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchCount">
+      <soap:operation soapAction="http://tempuri.org/IBranch/GetBranchCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranch">
+      <soap:operation soapAction="http://tempuri.org/IBranch/GetBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchData">
+      <soap:operation soapAction="http://tempuri.org/IBranch/GetBranchData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BranchService">
+    <wsdl:port name="BasicHttpBinding_IBranch" binding="tns:BasicHttpBinding_IBranch">
+      <soap:address location="http://localhost:9000/SMI/BranchService/BranchService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -50,13 +50,23 @@
 
                   <div class ="mb-3">
                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
-                      <a href ="Student.aspx" ><label>Student</label></a>
+                      <a href ="Student.aspx" ><label>Students</label></a>
                 </div>
+
+                  <div class ="mb-3">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+      <a href ="Branch.aspx" ><label>Branches</label></a>
+</div>
 
               <div class ="mb-3">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
                     <a href ="CreateStudent.aspx" ><label>Create Student</label></a>
                 </div>
+
+                  <div class ="mb-3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-o86obF-UTdLqsqqiUM6O82URx7R52fXlw&usqp=CAU" height="20"  width="20" />
+        <a href ="CreateBranch.aspx" ><label>Create Branch</label></a>
+    </div>
 
              
 
